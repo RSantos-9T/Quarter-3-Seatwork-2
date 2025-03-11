@@ -1,0 +1,34 @@
+body {
+    background-color: #cce4f7;
+    font-family: Arial, sans-serif;
+}
+
+.robot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+.card {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.btn-info {
+    background-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-info:hover {
+    background-color: #008c9e;
+}
+.img {
+    width: 100px;
+}

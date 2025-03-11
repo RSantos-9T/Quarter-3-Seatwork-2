@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="icon">
+            <img src="https://th.bing.com/th/id/R.cb8b8c936932575835feaad36365f9d1?rik=4EXxKorr8LinlA&pid=ImgRaw&r=0" width="500" alt="Thermometer Icon">
+        </div>
+        <div class="input-output">  <font color="white"> 
+            <p>GIVEN HERE:</p>
+            <input type="text" id="temperature-input" placeholder="Enter farenheit">
+            <p>ANSWER:</p>
+            <input type="text" id="temperature-output" readonly>
+        </div>
+        <div class="buttons">
+            <button onclick="convertToCelsius()">CELSIUS</button>
+            <button onclick="convertToKelvin()">KELVIN</button>
+            <button onclick="refreshPage()">REFRESH</button>
+        </div> </font> 
+    </div>
+
+    <script>
+        function convertToCelsius() {
+            const temp = document.getElementById("temperature-input").value;
+            if (temp === "") {   
+                alert("enter a temperature grr");
+                return;
+            }
+            const celsius = (temp - 32) * (5 / 9);
+            document.getElementById("temperature-output").value = `${celsius.toFixed(2)} °C`;
+        }
+
+        function convertToKelvin() {
+            const temp = document.getElementById("temperature-input").value;
+            if (temp === "") {
+                alert("enter a temperature grr");
+                return;
+            }
+            const kelvin = (parseFloat(temp) + 273.15).toFixed(2);
+            document.getElementById("temperature-output").value = `${kelvin} K`;
+        }
+
+        function refreshPage() {
+            document.getElementById("temperature-input").value = "";
+            document.getElementById("temperature-output").value = "";
+        }
+    </script>
+</body>
+</html>
